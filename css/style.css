@@ -1,0 +1,186 @@
+.wrapper{
+	position:relative;
+	overflow: hidden;
+	min-height: 100%;
+	height: 100%;
+}
+.fon img{
+	max-width:100%;
+}
+.tree{
+position: absolute;
+top: 135px;
+left: 600px;
+}
+.tree img{
+	width: 400px;
+	height: 400px;
+}
+.header{
+	position: absolute;
+	top: 135px;
+	left: 600px;
+}
+.header img{
+	width: 400px;
+	height: 400px;
+	animation: header 10s infinite;
+}
+@keyframes header{
+	0% {
+		transform: rotate(0deg);
+	}
+	40%{
+		transform: rotate(-8deg);
+	}
+	80%{
+		transform: rotate(8deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+.sun{
+position:absolute;
+top:91px;
+right: 95px;
+}
+.sun img{
+	width: 100px;
+	height: 100px;
+	z-index: 2;
+}
+.beam{
+	position:absolute;
+top:45px;
+right: 48px;
+}
+.beam img{
+	width: 200px;
+	height: 200px;
+	animation: beam 10s infinite;
+}
+@keyframes beam {
+	0% {
+		transform: rotate(0deg);
+	}
+	40% {
+		transform: rotate(360deg);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	80% {
+		transform: rotate(360deg);
+	}
+	90% {
+		transform: scale(1.1);
+	}
+	100%{
+	transform: rotate(360deg);
+}
+}
+.airplane{
+	position: absolute;
+	top:0;
+}
+.airplane img{
+	width: 150px;
+}
+.airplane:hover img{
+	transform: translate(1500px);
+	transition: all 7s cubic-bezier(.52,.13,0,.62) 0.5s;
+}
+.bird{
+	position: absolute;
+	right: 0;
+	bottom: 175px;
+}
+.bird img{
+	max-width: 100px;
+	opacity: 0;
+	visibility: hidden;
+	animation: bird 10s cubic-bezier(.7,.15,.83,.67) alternate 1 1s forwards;
+}
+@keyframes bird{
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	20%{
+		opacity: 0.5;
+		visibility: visible;
+	}
+	30%{
+		opacity: 1;
+		visibility: visible;
+		transform: translate(0,0);
+	}
+	70%{
+		opacity: 1;
+		visibility: visible;
+		transform: translate(-500px,-350px);
+	}
+	80%{
+		opacity: 1;
+		visibility: visible;
+		transform: translate(-500px,-310px);
+	}
+	100%{
+		opacity: 1;
+		visibility: visible;
+		transform: translate(-500px,-310px);
+	}
+}
+
+.car{
+	position: absolute;
+	top: 507px;
+	animation: car-ride 10s forwards;
+}
+.car__wheels{
+	position: absolute;
+	bottom: 65px;
+	width: 100%;
+	left: 33px;
+}
+.car__wheel{
+	width: 55px;
+	height: 55px;
+	background-color: #666;
+	position: absolute;
+	border-radius: 50%;
+	outline: 4px dashed #000;
+	animation: wheels 10s linear forwards;
+}
+.car__wheel:first-child{
+	left: 0;
+}
+.car__wheel:last-child {
+	right: 73px;
+}
+@keyframes wheels{
+	0% {
+		transform: rotate(0deg);
+	}
+	40%{
+		transform: rotate(-360deg);
+	}
+	80%{
+		transform: rotate(360deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+@keyframes car-ride {
+	0% {
+		transform: translate(500%, 0px);
+	}
+	50%{
+		transform: translate(200px, 0px);
+	}
+	100% {
+		transform: translate(-400px, 0px);
+	}
+}
